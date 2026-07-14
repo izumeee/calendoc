@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Calendoc プライバシーポリシー</title>
+<link rel="canonical" href="https://calendoc.izumiapps.com/privacy-policy.html">
 <style>
   :root { color-scheme: light dark; }
   body {
@@ -30,28 +31,29 @@
 </style>
 </head>
 <body>
-<p class="lang-switch"><a href="privacy-policy-en.html">Read this in English</a></p>
+<p class="lang-switch"><a href="./">ホーム</a> · <a href="terms.html">利用規約</a> · <a href="privacy-policy-en.html">Read this in English</a></p>
 
 <h1>Calendoc プライバシーポリシー</h1>
-<p class="updated">最終更新日: 2026-07-09</p>
+<p class="updated">最終更新日: 2026-07-14</p>
 
 <p>Calendoc（以下「本アプリ」）は、izumeee（個人開発者。以下「開発者」）が提供する iOS / macOS 向けカレンダーアプリです。
-本アプリは「あなたの予定データは、あなたの端末の外に出ない」ことを設計原則としています。</p>
+本アプリは「あなたの予定内容を開発者のサーバーへ送らない」ことを設計原則としています。</p>
 
 <h2>1. 予定・リマインダーのデータ</h2>
 <ul>
   <li>本アプリは、お使いの端末のカレンダー・リマインダー（Apple の EventKit）を読み書きします。</li>
-  <li>これらのデータは<strong>端末内でのみ処理され、開発者のサーバーに送信されることはありません</strong>（開発者はサーバーを運用していません）。</li>
+  <li>これらのデータに対する本アプリの処理は<strong>端末内で行われ、開発者のサーバーに送信されることはありません</strong>（開発者はサーバーを運用していません）。</li>
   <li>iCloud や Google などとの同期は、お使いの端末の OS またはお客様が接続した各サービスが行うものであり、それぞれの提供者のプライバシーポリシーが適用されます。</li>
 </ul>
 
 <h2>2. Google アカウント連携（任意機能）</h2>
 <p>Google カレンダーの拡張機能（勤務場所・イベントの色・出欠返信・Google Tasks）を利用する場合、本アプリは Google の OAuth 認証を通じてお客様の許可を取得します。</p>
 <ul>
-  <li>取得した認証トークンは端末の Keychain にのみ安全に保管されます。</li>
-  <li>本アプリは、お客様の端末から Google の API に直接通信します。開発者を含む第三者のサーバーを経由しません。</li>
+  <li>本アプリは、接続したアカウントを識別・表示するため、Google のアカウント識別子、メールアドレス、表示名を取得します。</li>
+  <li>アカウント情報と認証トークンは端末の Keychain にのみ安全に保管され、開発者のサーバーには送信されません。</li>
+  <li>本アプリは、お客様の端末から Google API に直接通信します。開発者が運営するサーバーや、その他の中継サーバーは経由しません。</li>
   <li>取得した情報（予定・タスク・勤務場所等）は表示・編集のためにのみ使用し、広告・分析・第三者提供には一切使用しません。</li>
-  <li>連携はいつでも設定画面から解除でき、解除するとトークンは端末から削除されます。Google アカウント側の権限は <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a> からも取り消せます。</li>
+  <li>連携はいつでも設定画面から解除でき、解除するとアカウント情報と認証トークンは端末から削除されます。Google アカウント側の権限は <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a> からも取り消せます。</li>
   <li>本アプリによる Google API から取得した情報の利用は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API サービスのユーザーデータに関するポリシー</a>（限定的使用の要件を含む）に準拠します。</li>
 </ul>
 
@@ -63,15 +65,16 @@
   <li>設定画面の「匿名の利用統計を送信」からいつでもオフにできます。</li>
 </ul>
 
-<h2>4. 収集しないもの</h2>
+<h2>4. 開発者が収集・利用しないもの</h2>
 <ul>
-  <li>氏名・メールアドレス・連絡先・位置情報を収集しません（Android 版ウェイトリスト等に自らご登録いただいた場合を除く）。</li>
+  <li>予定、タスク、勤務場所、Google アカウント情報を開発者のサーバーへ収集しません。</li>
+  <li>端末の連絡先や現在地にはアクセスしません。</li>
   <li>広告 SDK を含みません。</li>
-  <li>お客様のデータを販売・共有しません。</li>
+  <li>予定、タスク、勤務場所、Google アカウント情報を販売、広告利用、または第三者提供しません。</li>
 </ul>
 
 <h2>5. お子様のプライバシー</h2>
-<p>本アプリは特定の年齢層を対象としたデータ収集を行いません。</p>
+<p>本アプリは子どもを対象として設計されておらず、子どもから個人情報を故意に収集しません。</p>
 
 <h2>6. 変更について</h2>
 <p>本ポリシーを変更する場合、本ページを更新し、重要な変更はアプリ内でお知らせします。</p>

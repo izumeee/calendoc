@@ -1,30 +1,103 @@
 <!doctype html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calendoc</title>
+<title>Calendoc — 混ぜない。並べる。</title>
+<meta name="description" content="仕事・副業・家庭。役割ごとのカレンダーを、混ぜずに並べて一望できる iOS カレンダーアプリ。">
+<link rel="canonical" href="https://calendoc.izumiapps.com/">
 <style>
-  :root { color-scheme: light dark; }
+  :root {
+    color-scheme: light dark;
+    --green-deep: #3e7f22;
+    --hero-deep: #356f1d;
+    --ink: #1b2314;
+    --sub: #5c6653;
+    --surface: #ffffff;
+    --background: #fbfdf7;
+    --border: #dfe7d8;
+  }
+  * { box-sizing: border-box; }
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
-    max-width: 480px;
-    margin: 4rem auto;
-    padding: 0 1.25rem;
-    color: #1c1c1e;
-    background: #ffffff;
-    line-height: 1.7;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: var(--background);
+    line-height: 1.75;
+  }
+  .hero {
+    padding: 5.5rem 1.5rem 4.5rem;
+    color: #ffffff;
+    text-align: center;
+    background: linear-gradient(135deg, #477f26, var(--hero-deep));
+  }
+  .hero h1 { margin: 0; font-size: clamp(2.5rem, 9vw, 4rem); letter-spacing: .04em; }
+  .hero p { max-width: 34rem; margin: 1rem auto 0; color: #ffffff; font-size: 1.08rem; }
+  main { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+  section { margin-top: 2.75rem; }
+  h2 { margin: 0 0 .75rem; color: var(--green-deep); font-size: 1.25rem; }
+  p { margin: .75rem 0; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: .9rem; margin-top: 1.4rem; }
+  .feature { padding: 1.1rem; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+  .feature strong { display: block; margin-bottom: .35rem; }
+  .feature p { margin: 0; color: var(--sub); font-size: .92rem; }
+  a { color: var(--green-deep); text-underline-offset: .18em; }
+  .links { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem 1.5rem; padding: 1.25rem; border: 1px solid var(--border); border-radius: 14px; background: var(--surface); }
+  footer { padding: 0 1.5rem 3rem; color: var(--sub); text-align: center; font-size: .86rem; }
+  @media (max-width: 620px) {
+    .features, .links { grid-template-columns: 1fr; }
+    .hero { padding-top: 4.25rem; }
   }
   @media (prefers-color-scheme: dark) {
-    body { color: #f2f2f7; background: #000000; }
-    a { color: #6cb4ff; }
+    :root {
+      --green-deep: #8ed35d;
+      --ink: #f2f7ee;
+      --sub: #b7c0b1;
+      --surface: #182014;
+      --background: #0e130b;
+      --border: #35412f;
+    }
   }
-  a { color: #0066cc; }
 </style>
 </head>
 <body>
-<h1>Calendoc</h1>
-<p><a href="privacy-policy.html">プライバシーポリシー / Privacy Policy (日本語)</a></p>
-<p><a href="privacy-policy-en.html">Privacy Policy (English)</a></p>
+<header class="hero">
+  <h1>Calendoc</h1>
+  <p>混ぜない。並べる。— 仕事・副業・家庭など、役割ごとのカレンダーを1画面で見比べられる iOS カレンダーアプリです。</p>
+</header>
+
+<main>
+  <section aria-labelledby="about-heading">
+    <h2 id="about-heading">複数の予定を、ひと目で</h2>
+    <p>Calendoc は、複数のアカウントやカレンダーを縦の列に分けて表示します。予定を1つに混ぜず、どの役割の時間なのかを保ったまま、1日の流れを確認できます。App Storeで近日公開予定です。</p>
+    <div class="features">
+      <div class="feature"><strong>並列カレンダー</strong><p>アカウントや役割ごとに列を分け、高密度に見比べられます。</p></div>
+      <div class="feature"><strong>Google連携</strong><p>予定の色、出欠返信、Google Tasksなどをフル解像度で扱います。</p></div>
+      <div class="feature"><strong>端末中心の設計</strong><p>予定データは開発者のサーバーを経由せず、端末から各サービスへ直接通信します。</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="google-heading">
+    <h2 id="google-heading">Googleアカウント連携について</h2>
+    <p>Google連携は任意です。有効にすると、Calendocはお客様が許可した範囲でGoogle CalendarとGoogle Tasksの情報を表示・編集します。認証情報は端末のKeychainに保管され、通信は端末からGoogle APIへ直接行われます。詳しくは<a href="privacy-policy.html">プライバシーポリシー</a>をご覧ください。</p>
+  </section>
+
+  <section aria-labelledby="support-heading">
+    <h2 id="support-heading">お問い合わせ・サポート</h2>
+    <p>ご意見や不具合のご報告は <a href="mailto:izumeee.dev@gmail.com">izumeee.dev@gmail.com</a> までお送りください。</p>
+  </section>
+
+  <section aria-labelledby="legal-heading">
+    <h2 id="legal-heading">法的情報 / Legal</h2>
+    <div class="links">
+      <a href="privacy-policy.html">プライバシーポリシー</a>
+      <a href="privacy-policy-en.html" lang="en">Privacy Policy</a>
+      <a href="terms.html">利用規約</a>
+      <a href="terms-en.html" lang="en">Terms of Use</a>
+    </div>
+  </section>
+</main>
+
+<footer>&copy; 2026 izumeee</footer>
 </body>
 </html>
