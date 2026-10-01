@@ -34,14 +34,14 @@
 <p class="lang-switch"><a href="./">Home</a> · <a href="terms-en.html">Terms of Use</a> · <a href="privacy-policy.html">日本語で読む</a></p>
 
 <h1>Calendoc Privacy Policy</h1>
-<p class="updated">Last updated: July 30, 2026</p>
+<p class="updated">Last updated: October 1, 2026</p>
 
-<p>Calendoc ("the app") is a calendar app for iOS / macOS developed by イズミアプリケーション, an independent developer ("the developer").
+<p>Calendoc ("the app") is a calendar app for iOS / macOS / Android developed by イズミアプリケーション, an independent developer ("the developer"). This policy applies to all editions of Calendoc, including Free and Pro.
 The app is built on one design principle: <strong>your schedule content is never sent to the developer's servers.</strong></p>
 
 <h2>1. Calendar and Reminder Data</h2>
 <ul>
-  <li>The app reads and writes the calendars and reminders on your device via Apple's EventKit.</li>
+  <li>On iOS / macOS, the app reads and writes your device's calendars and reminders via Apple's EventKit. On Android, it reads and writes your device's calendars via CalendarProvider.</li>
   <li>The app processes this data <strong>on your device and never sends it to the developer's servers</strong> (the developer operates no servers).</li>
   <li>Syncing with iCloud, Google, or other services is performed by your device's operating system or the services you have connected, under their respective privacy policies.</li>
 </ul>
@@ -58,7 +58,8 @@ The app is built on one design principle: <strong>your schedule content is never
 <h2>3. Protection of Google User Data</h2>
 <ul>
   <li>All communication between the app and Google APIs is encrypted in transit using HTTPS/TLS.</li>
-  <li>Your Google account identifier, email address, display name, and OAuth access and refresh tokens are stored only in Apple Keychain on your device. Keychain encrypts stored data and protects it with operating-system-level access controls.</li>
+  <li>On iOS / macOS, your Google account identifier, email address, display name, and OAuth access and refresh tokens are stored only in Apple Keychain on your device. Keychain encrypts stored data and protects it with operating-system-level access controls.</li>
+  <li>On Android, Google Identity Services manages authentication tokens. The app temporarily holds obtained access tokens in memory and does not store access or refresh tokens in its own persistent storage. Account profiles (identifier, email address, display name, and connection date) are encrypted with AES/GCM using an Android Keystore key and stored in DataStore on your device. This profile storage is excluded from operating-system backups and device transfers.</li>
   <li>The app does not create or maintain an app-managed persistent database for event, task, working-location, or other content obtained from Google APIs. This content is processed as transient application state as needed to display and edit it.</li>
   <li>The app communicates directly from your device to Google APIs. No developer-operated backend receives Google user data, and the developer cannot access its content.</li>
 </ul>
@@ -66,15 +67,16 @@ The app is built on one design principle: <strong>your schedule content is never
 <h2>4. Retention and Deletion of Google User Data</h2>
 <ul>
   <li>No long-term retention period applies to event, task, working-location, or other content obtained from Google APIs. The app does not store this content in an app-managed persistent database. Transient application state needed for the current display or operation is replaced or discarded when data is reloaded, the app process ends, or it is no longer needed. It is never retained on developer-operated servers.</li>
-  <li>Your Google account information and OAuth credentials remain in Keychain only while that account is connected to the app.</li>
-  <li>You can disconnect an account at any time in the app's Settings. The disconnection process deletes that account's information and OAuth credentials from Keychain, after which the app no longer accesses Google user data for that account. If a device storage error or similar issue prevents deletion and you need assistance, contact the developer using the details at the end of this policy.</li>
-  <li>You can also revoke the app's access from your Google Account at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
+  <li>On iOS / macOS, your Google account information and OAuth credentials remain in Keychain only while that account is connected to the app. On Android, connected account profiles remain in the encrypted storage described above, and obtained access tokens are held temporarily in memory.</li>
+  <li>You can disconnect an account at any time in the app's Settings. On iOS / macOS, disconnection deletes that account's information and OAuth credentials from Keychain. On Android, it deletes the account's local profile and access tokens cached in the app's memory. After disconnection, the app no longer accesses Google user data for that account. If a device storage error or similar issue prevents deletion and you need assistance, contact the developer using the details at the end of this policy.</li>
+  <li>Disconnecting an account within the Android app does not revoke Google's access permission. You can revoke the app's access from your Google Account at <a href="https://myaccount.google.com/permissions">https://myaccount.google.com/permissions</a>.</li>
   <li>Because the developer does not store Google user data on any server, there is no developer-held server data to retain or delete. If you need assistance with deletion, contact the developer using the details at the end of this policy.</li>
 </ul>
 
 <h2>5. Anonymous Usage Statistics (Opt-out Available)</h2>
 <p>To improve the app, Calendoc may collect anonymous usage statistics via <strong>TelemetryDeck</strong> (e.g., which screens are opened, which features are used).</p>
 <ul>
+  <li>No usage statistics are sent if a valid TelemetryDeck App ID is not configured for the distributed app.</li>
   <li>Event, task, and working-location content, Google account information, and OAuth credentials are never sent to TelemetryDeck.</li>
   <li>Collected signals are anonymized and cannot identify you. The app performs no cross-app or cross-site tracking.</li>
   <li>You can turn this off anytime in Settings ("Send anonymous usage statistics").</li>
